@@ -1,0 +1,196 @@
+/* ----------------------------------------------------
+   GENERAL RESET – removes default browser spacing
+   ---------------------------------------------------- */
+* {
+    margin: 0;                  /* Removes default margin on all elements */
+    padding: 0;                 /* Removes default padding on all elements */
+    box-sizing: border-box;     /* Makes width/height include padding & borders */
+    font-family: Arial, sans-serif; /* Sets the default font for the whole page */
+}
+
+
+/* ----------------------------------------------------
+   NAVBAR STYLES
+   ---------------------------------------------------- */
+.navbar {
+    position: fixed;               /* Keeps navbar at the top when scrolling */
+    width: 100%;                   /* Navbar spans the full width of the page */
+    display: flex;                 /* Use flexbox to align items horizontally */
+    justify-content: space-between;/* Places logo on left & menu on right */
+    padding: 10px 50px;            /* Space inside navbar (top/bottom 10px, left/right 50px) */
+    background: rgba(0,0,0,0.4);   /* Semi-transparent black background */
+    backdrop-filter: blur(5px);    /* Blurs what's behind it (frosted-glass effect) */
+}
+
+.logo {
+    color: #FFD700;
+}
+/* List items in the nav */
+.nav-links li {
+    display: inline-block;         /* Makes menu items sit side-by-side */
+    margin-left: 25px;             /* Adds spacing between menu items */
+}
+
+/* Style for navbar links */
+.nav-links a {
+    color: white;                  /* Text color for nav links */
+    text-decoration: none;         /* Removes underline */
+    font-size: 18px;               /* Increases text size */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #FFD700;                /* Gold color on hover */
+}
+
+
+/* ----------------------------------------------------
+   HERO SECTION – full-screen banner
+   ---------------------------------------------------- */
+.hero {
+    height: 60vh;                             /* Full browser viewport height */
+    background: url("images/hero.jpg") center;
+    background-size: cover;     /* Background image for hero section */
+    display: flex;                              /* Flexbox to center content */
+    justify-content: center;                   /* Center horizontally */
+    align-items: center;                       /* Center vertically */
+    color: white;                               /* Text color */
+    text-shadow: 2px 2px 5px black;             /* Adds shadow for readability */
+}
+
+/* Hero heading */
+.hero-text h2 {
+    font-size: 70px;                /* Large title text */
+}
+
+/* Hero subtitle */
+.hero-text p {
+    font-size: 25px;                /* Subtitle size */
+}
+
+
+/* ----------------------------------------------------
+   FEATURES SECTION – four cards
+   ---------------------------------------------------- */
+.features {
+    padding: 60px;                   /* Space around the section */
+    text-align: center;              /* Centers text inside section */
+    background: #f5f5f5;             /* Light grey background */
+}
+
+.feature-container {
+    display: grid;                    /* Creates grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 25px;                        /* Space between cards */
+    margin-top: 30px;                 /* Space above the grid */
+}
+
+/* Individual feature card */
+.feature-card {
+    background: white;                /* White card background */
+    padding: 20px;                    /* Space inside card */
+    border-radius: 10px;              /* Rounded corners */
+    transition: 0.3s;                 /* Smooth animations */
+}
+
+/* Lift card on hover */
+.feature-card:hover {
+    transform: translateY(-10px);     /* Moves card upward */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow on hover */
+}
+
+
+/* ----------------------------------------------------
+   DISCOVER SECTION – 3 image cards
+   ---------------------------------------------------- */
+.discover {
+    padding: 60px;                   /* Space around section */
+    text-align: center;              /* Centered heading */
+}
+
+.discover-cards {
+    display: flex;                   /* Flexbox for row layout */
+    justify-content: space-between;  /* Even spacing between cards */
+    gap: 20px;                       /* Space between cards */
+    margin-top: 40px;                /* Space above cards */
+}
+
+/* Single discover card */
+.card {
+    width: 32%;                     /* Three cards fit in a row (32% * 3 = 96%) */
+    background: white;              /* White background */
+    border-radius: 10px;            /* Rounded corners */
+    overflow: hidden;               /* Hides edges of contained image */
+    transition: 0.3s;               /* Smooth animation on hover */
+}
+
+/* Images inside discover cards */
+.card img {
+    width: 100%;                   /* Image fills card width */
+    height: 200px;                 /* Fixed height */
+    object-fit: cover;             /* Keeps image centered without stretching */
+}
+
+/* Zoom card on hover */
+.card:hover {
+    transform: scale(1.05);         /* Slight zoom effect */
+}
+
+/* Text inside the card */
+.card-content {
+    padding: 20px;                 /* Inner spacing */
+}
+
+
+/* ----------------------------------------------------
+   STATISTICS SECTION – 4 boxes
+   ---------------------------------------------------- */
+.stats {
+    padding: 60px;                /* Space around section */
+    background: #e9ecef;          /* Light grey background */
+    text-align: center;           /* Centered heading */
+}
+
+.stats-grid {
+    display: grid;                /* Grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 25px;                    /* Space between boxes */
+    margin-top: 40px;             /* Space above grid */
+}
+
+/* Individual stat box */
+.stat-box {
+    padding: 30px;               /* Inside spacing */
+    background: white;           /* White box background */
+    border-radius: 10px;         /* Rounded corners */
+    transition: 0.3s;            /* Smooth hover animation */
+}
+
+/* Hover effect for stats */
+.stat-box:hover {
+    background: #FFD700;         /* Gold background on hover */
+    color: black;                /* Change text color for contrast */
+}
+
+
+/* ----------------------------------------------------
+   FOOTER SECTION
+   ---------------------------------------------------- */
+.footer {
+    padding: 30px;               /* Space inside footer */
+    background: black;           /* Black background */
+    color: white;                /* White text */
+    text-align: center;          /* Centered text */
+}
+
+/* Footer links */
+.footer a {
+    color: #FFD700;              /* Gold link color */
+    margin: 0 10px;              /* Spacing between links */
+    text-decoration: none;       /* Remove underline */
+}
+
+/* Hover underline effect */
+.footer a:hover {
+    text-decoration: underline;  /* Underline when hovered */
+}
