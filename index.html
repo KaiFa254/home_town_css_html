@@ -128,6 +128,11 @@
         </div>
     </section>
 
+    <!-- VISITOR COUNTER -->
+<section class="visitor-counter">
+    <p>👁️ Visitors: <span id="visit-count">Loading...</span></p>
+</section>
+
     <!-- FOOTER -->
     <footer class="footer">
         <p>© 2025 Nairobi City • All Rights Reserved</p>
@@ -137,6 +142,32 @@
             <a href="#">X (Twitter)</a>
         </div>
     </footer>
+  <script>
+    // Function to fetch and update visitor count from CountAPI
+    async function updateVisitorCount() {
 
+        // "hit" increases count by 1 on every page load
+        // "hometown-nairobi-site" is your unique namespace (safe & unique)
+        const apiUrl = "https://api.countapi.xyz/hit/hometown-nairobi-site/visits";
+
+        try {
+            // Request the current count from CountAPI
+            const response = await fetch(apiUrl);
+
+            // Convert response to a usable JSON object
+            const data = await response.json();
+
+            // Update the <span> with the visitor count value
+            document.getElementById("visit-count").innerText = data.value;
+
+        } catch (error) {
+            // If something goes wrong, show a fallback message
+            document.getElementById("visit-count").innerText = "Error";
+        }
+    }
+
+    // Run the function when the page loads
+    updateVisitorCount();
+</script>
 </body>
 </html>

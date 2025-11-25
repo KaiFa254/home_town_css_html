@@ -194,3 +194,15 @@
 .footer a:hover {
     text-decoration: underline;  /* Underline when hovered */
 }
+
+.visitor-counter {
+    background: #111;
+    color: #0ff;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 15px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
